@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="page">
+    <h2>Dynamic Quiz Application</h2>
+
+    <!-- START SCREEN -->
+    <div id="start-screen">
+      <p>Select difficulty to begin</p>
+
+      <!-- Difficulty as radio buttons -->
+      <div id="difficulty-options">
+        <label>
+          <input type="radio" name="difficulty" value="easy" checked>
+          Easy
+        </label>
+        <label>
+          <input type="radio" name="difficulty" value="medium">
+          Medium
+        </label>
+        <label>
+          <input type="radio" name="difficulty" value="hard">
+          Hard
+        </label>
+      </div>
+
+      <button id="startBtn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div id="quiz-container" class="hidden">
+      <p id="timer">Time Left: 10s</p>
+      <h3 id="question"></h3>
+      <div id="options"></div>
+      <button id="nextBtn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div id="result" class="hidden"></div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
